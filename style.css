@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #6c757d; /* Un gris suave */
+    --secondary-color: #f8f9fa; /* Un blanco roto */
+    --accent-color: #0d6efd; /* Azul de Bootstrap */
+    --text-color: #212529;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    scroll-padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.navbar {
+    transition: all 0.4s ease-in-out;
+}
+
+#hero {
+    height: 100vh;
+    background: url('artist_hero.png') no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#hero h1 {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.music-player-container {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+}
+
+#album-art {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    #album-art {
+         margin-bottom: 0;
+    }
+}
+
+.progress-container {
+    background: #e9ecef;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 8px;
+    width: 100%;
+}
+
+.progress {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.controls-container {
+    width: 100%;
+}
+
+.volume-container {
+    width: 120px; /* Adjust as needed */
+}
+
+.form-range {
+    padding: 0;
+}
+
+.controls button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+.controls button:focus {
+    outline: 0;
+}
+
+.controls .fa-play, .controls .fa-pause {
+    color: var(--accent-color);
+}
+
+#playlist .list-group-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#playlist .list-group-item:hover {
+    background-color: var(--light-bg);
+}
+
+#playlist .list-group-item.playing {
+    background-color: #e7f1ff;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+#playlist .list-group-item.playing .text-muted {
+    color: var(--accent-color) !important;
+    opacity: 0.8;
+}
+
+.playlist-album-art {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#about .img-fluid {
+    max-width: 80%;
+    height: auto;
+}
+
+.tour-card {
+    border: 1px solid #dee2e6;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.tour-date {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 1rem auto;
+    width: 80px;
+}
+
+.tour-date .day {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.tour-date .month {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tour-card-soldout {
+    opacity: 0.7;
+}
+
+.tour-card-soldout .tour-date {
+    background-color: var(--primary-color);
+}
+
+.spotify-embed-container {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.spotify-embed-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
